@@ -1,0 +1,9 @@
+In addition to the installation instructions provided by the authors, here are some more steps a mac user (with newer versions of Mac OS) needs to do:
+
+'''
+export CC=/usr/bin/clang
+export CXX=/usr/bin/clang++
+'''
+
+This website shows a thread of similar troubleshooting:
+https://github.com/astropy/halotools/issues/813

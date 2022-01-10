@@ -20,9 +20,13 @@ import scipy as scipy
 import pickle
 from sklearn.decomposition import PCA
 from scipy.optimize import curve_fit
+import os
+THIS_FOLDER = os.path.dirname(os.path.abspath(__file__))
+fast_file = os.path.join(THIS_FOLDER, 'model_circle_fast.pkl')
+slow_file = os.path.join(THIS_FOLDER, 'model_circle_slow.pkl')
 
-model_circle_fast=pickle.load(open('model_circle_fast.pkl','rb'))
-model_circle_slow=pickle.load(open('model_circle_slow.pkl','rb'))
+model_circle_fast=pickle.load(open(fast_file,'rb'))
+model_circle_slow=pickle.load(open(slow_file,'rb'))
 
 def sufficient_statistics(ptrm, nrm):
     """
